@@ -3,10 +3,7 @@ from dotenv import load_dotenv
 import os
 
 from langchain_community.chat_models import ChatOpenAI
-from langchain.schema import (
-    SystemMessage,
-    HumanMessage
-)
+from langchain_core.messages import SystemMessage, HumanMessage 
 
 #  環境変数の読み込み
 load_dotenv()
@@ -32,7 +29,7 @@ def get_expert_answer(user_input, selected_expert):
         SystemMessage(content=system_prompt),
         HumanMessage(content=user_input)
     ]
-    response = llm(messages)
+    response = llm.invoke(messages)
     return response.content
 
 #  Streamlit アプリ画面
