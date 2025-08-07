@@ -51,11 +51,11 @@ typing-inspection==0.4.1
 typing_extensions==4.14.1
 tzdata==2025.2
 urllib3==2.5.0
-langchain-community==0.0.26
-langchain==0.2.0 
 streamlit==1.41.1
-langchain-community==0.0.21
 openai==1.14.2
 python-dotenv==1.1.1
 rich<14
-langchain-core==0.1.43
+langchain==0.2.0
+langchain-community==0.0.26
+langchain-core==0.1.74
+langchain-openai==0.1.8
