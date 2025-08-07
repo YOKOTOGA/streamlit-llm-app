@@ -2,7 +2,7 @@ import streamlit as st
 from dotenv import load_dotenv
 import os
 
-from langchain.chat_models import ChatOpenAI
+from langchain_community.chat_models import ChatOpenAI
 from langchain.schema import (
     SystemMessage,
     HumanMessage
@@ -13,8 +13,7 @@ load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
 #  LangChain経由でOpenAIを使うLLMの準備
-llm = ChatOpenAI(openai_api_key=openai_api_key, model="gpt-4")
-
+llm = ChatOpenAI(api_key=openai_api_key, model="gpt-4")
 #  専門家の種類（ラジオボタン用）
 experts = {
     "👨‍⚕️ かかりつけの家庭医": "あなたは患者の気持ちを大切にする、優しいかかりつけ医です。生活習慣や体調の悩みに、医学的知識と生活者目線で寄り添って回答してください。",
